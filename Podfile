@@ -6,13 +6,13 @@ target 'PPS' do
   use_frameworks!
 
   # Pods for PPS
-  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Auth', '~> 4.5.5'
 
-  pod 'FirebaseUI/Google'
-  pod 'FirebaseUI/Facebook'
-  pod 'FirebaseUI/Twitter'
-  pod 'FirebaseUI/Phone'
-  pod 'GoogleMaps'
+  pod 'FirebaseUI/Google', '~> 4.5.5'
+  pod 'FirebaseUI/Facebook', '~> 4.5.5'
+  pod 'FirebaseUI/Twitter', '~> 4.5.5'
+  pod 'FirebaseUI/Phone', '~> 4.5.5'
+  pod 'GoogleMaps','~> 2.7.0'
 
   target 'PPSTests' do
     inherit! :search_paths

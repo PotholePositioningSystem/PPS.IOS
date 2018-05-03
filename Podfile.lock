@@ -78,12 +78,12 @@ PODS:
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
-  - FirebaseUI/Auth
-  - FirebaseUI/Facebook
-  - FirebaseUI/Google
-  - FirebaseUI/Phone
-  - FirebaseUI/Twitter
-  - GoogleMaps
+  - FirebaseUI/Auth (~> 4.5.5)
+  - FirebaseUI/Facebook (~> 4.5.5)
+  - FirebaseUI/Google (~> 4.5.5)
+  - FirebaseUI/Phone (~> 4.5.5)
+  - FirebaseUI/Twitter (~> 4.5.5)
+  - GoogleMaps (~> 2.7.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -124,6 +124,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: ae0856da258ddd7c11906b15c0b81aa09e004eab
+PODFILE CHECKSUM: 01b743fdacfcbd897cfa8774a523ba13bdd0286d
 
 COCOAPODS: 1.5.0
