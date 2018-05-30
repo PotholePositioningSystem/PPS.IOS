@@ -38,9 +38,12 @@ class ViewController: BaseViewController,UIScrollViewDelegate,UITabBarDelegate {
         
     }
     
+   
     override func viewDidLayoutSubviews() {
+        tabBar.invalidateIntrinsicContentSize()
         resizeView()
     }
+    
     
     
     override func viewDidLoad() {
@@ -48,6 +51,7 @@ class ViewController: BaseViewController,UIScrollViewDelegate,UITabBarDelegate {
         mainNavBar()
         scrollView.delegate = self
         tabBar.delegate = self
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

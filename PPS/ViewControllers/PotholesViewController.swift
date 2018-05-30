@@ -9,13 +9,29 @@
 import UIKit
 
 class PotholesViewController: BaseViewController {
-
+    @IBOutlet weak var circleButton: MyButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setShadow()
         // Do any additional setup after loading the view.
     }
 
+    func setShadow()
+    {
+        circleButton.layer.shadowColor = UIColor.black.cgColor
+        circleButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        circleButton.layer.masksToBounds = false
+        circleButton.layer.shadowRadius = 1.5
+        circleButton.layer.shadowOpacity = 0.3
+        circleButton.layer.cornerRadius = circleButton.frame.width / 2
+    }
+    
+    @IBAction func circleButtonAction(_ sender: Any) {
+        let authViewController = (UIApplication.shared.delegate as! AppDelegate).authUI?.authViewController()
+        present(authViewController!, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

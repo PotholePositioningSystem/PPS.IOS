@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>By access location you will be able to see location on map</string>
+	<key>FacebookDisplayName</key>
+	<string>189229117859193</string>
+	<key>FacebookAppID</key>
+	<string>189229117859193</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -25,7 +27,8 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.249361962405-55m3khd3g71n39a160bf3u6fqov2tvij</string>
+				<string>fb189229117859193</string>
+				<string>com.googleusercontent.apps.661149484974-7q3s0g8ithjk6no1aurkb36gs0rj9br4</string>
 			</array>
 		</dict>
 	</array>
@@ -33,6 +36,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>By access location you will be able to see location on map</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

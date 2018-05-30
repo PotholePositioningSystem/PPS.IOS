@@ -20,7 +20,7 @@ import GoogleMaps
 class AppDelegate: UIResponder, UIApplicationDelegate,FUIAuthDelegate {
 
     var window: UIWindow?
-    
+    var authUI:FUIAuth?
   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -29,12 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FUIAuthDelegate {
         GMSServices.provideAPIKey(Keys.GoogleMapsAPIKEY)
         
         FirebaseApp.configure()
-        let authUI = FUIAuth.defaultAuthUI()
+         authUI = FUIAuth.defaultAuthUI()
         authUI?.delegate = self
         
         let providers: [FUIAuthProvider] = [
-            FUIGoogleAuth()//,
-//            FUIFacebookAuth(),
+//            FUIGoogleAuth()//,
+            FUIFacebookAuth(),
 //            FUITwitterAuth(),
 //            FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!),
             ]
@@ -43,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,FUIAuthDelegate {
 //        self.window = UIWindow(frame: UIScreen.main.bounds)
 //        self.window?.rootViewController = authViewController
 //        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

@@ -24,6 +24,8 @@
 		980228D1209986A400C396F0 /* ImageDiskCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980228D0209986A400C396F0 /* ImageDiskCache.swift */; };
 		980228D3209986EB00C396F0 /* Print.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980228D2209986EB00C396F0 /* Print.swift */; };
 		9814895E209AD530002E538C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9814895D209AD530002E538C /* Keys.swift */; };
+		9830BB5E20BE621A000AC9A6 /* UITabSafeAreaFix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9830BB5D20BE621A000AC9A6 /* UITabSafeAreaFix.swift */; };
+		9830BB6020BE6985000AC9A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9830BB5F20BE6985000AC9A6 /* GoogleService-Info.plist */; };
 		983D88C2A86FCD1EDC5D5973 /* Pods_PPS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7710E1EBF27DC0EC98C01FCC /* Pods_PPS.framework */; };
 		98E66446209815BA00CF28A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E66445209815BA00CF28A6 /* AppDelegate.swift */; };
 		98E66448209815BA00CF28A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E66447209815BA00CF28A6 /* ViewController.swift */; };
@@ -32,7 +34,6 @@
 		98E66450209815BD00CF28A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E6644E209815BD00CF28A6 /* LaunchScreen.storyboard */; };
 		98E6645B209815BD00CF28A6 /* PPSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E6645A209815BD00CF28A6 /* PPSTests.swift */; };
 		98E66466209815BD00CF28A6 /* PPSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98E66465209815BD00CF28A6 /* PPSUITests.swift */; };
-		98E66474209819D900CF28A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98E66473209819D900CF28A6 /* GoogleService-Info.plist */; };
 		D4CD44D70AC2BC730713C89F /* Pods_PPSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D2B27C003DBE7AD190CCEEA /* Pods_PPSTests.framework */; };
 		DFD427EE7F0E85FD1B0169D0 /* Pods_PPSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4886091B1FA361A05AA82EBC /* Pods_PPSUITests.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,9 @@
 		980228D0209986A400C396F0 /* ImageDiskCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDiskCache.swift; sourceTree = "<group>"; };
 		980228D2209986EB00C396F0 /* Print.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Print.swift; sourceTree = "<group>"; };
 		9814895D209AD530002E538C /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		9830BB5D20BE621A000AC9A6 /* UITabSafeAreaFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabSafeAreaFix.swift; sourceTree = "<group>"; };
+		9830BB5F20BE6985000AC9A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9830BB6120BE6B71000AC9A6 /* PPS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PPS.entitlements; sourceTree = "<group>"; };
 		98E66442209815BA00CF28A6 /* PPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E66445209815BA00CF28A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98E66447209815BA00CF28A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +96,6 @@
 		98E66461209815BD00CF28A6 /* PPSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E66465209815BD00CF28A6 /* PPSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPSUITests.swift; sourceTree = "<group>"; };
 		98E66467209815BD00CF28A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		98E66473209819D900CF28A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE1A27DA6B7247FDC9DFD23F /* Pods-PPS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPS/Pods-PPS.debug.xcconfig"; sourceTree = "<group>"; };
 		D5182C2ED9F053582B05C2EE /* Pods-PPSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPSUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPSUITests/Pods-PPSUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,6 +225,7 @@
 				980228C120997EA900C396F0 /* UIColorExtension.swift */,
 				980228C32099815D00C396F0 /* UIExtensions.swift */,
 				980228C5209981CB00C396F0 /* UIViewControllerExtension.swift */,
+				9830BB5D20BE621A000AC9A6 /* UITabSafeAreaFix.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -229,7 +233,7 @@
 		98E66439209815BA00CF28A6 = {
 			isa = PBXGroup;
 			children = (
-				98E66473209819D900CF28A6 /* GoogleService-Info.plist */,
+				9830BB5F20BE6985000AC9A6 /* GoogleService-Info.plist */,
 				98E66444209815BA00CF28A6 /* PPS */,
 				98E66459209815BD00CF28A6 /* PPSTests */,
 				98E66464209815BD00CF28A6 /* PPSUITests */,
@@ -252,6 +256,7 @@
 		98E66444209815BA00CF28A6 /* PPS */ = {
 			isa = PBXGroup;
 			children = (
+				9830BB6120BE6B71000AC9A6 /* PPS.entitlements */,
 				980228AE20996E6400C396F0 /* Utility */,
 				980228AA20996B2100C396F0 /* Models */,
 				980228AC20996C9600C396F0 /* ModelView */,
@@ -356,6 +361,11 @@
 				TargetAttributes = {
 					98E66441209815BA00CF28A6 = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					98E66455209815BD00CF28A6 = {
 						CreatedOnToolsVersion = 9.3;
@@ -398,7 +408,7 @@
 				980228B8209970A400C396F0 /* DriverViewController.xib in Resources */,
 				98E6644B209815BA00CF28A6 /* Main.storyboard in Resources */,
 				980228B420996FE700C396F0 /* PotholesViewController.xib in Resources */,
-				98E66474209819D900CF28A6 /* GoogleService-Info.plist in Resources */,
+				9830BB6020BE6985000AC9A6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +573,7 @@
 				980228CA2099830C00C396F0 /* UIViewDesignableExtensions.swift in Sources */,
 				980228C020997E4E00C396F0 /* NavBarExtension.swift in Sources */,
 				980228B320996FE700C396F0 /* PotholesViewController.swift in Sources */,
+				9830BB5E20BE621A000AC9A6 /* UITabSafeAreaFix.swift in Sources */,
 				980228BE2099727D00C396F0 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -669,7 +680,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -723,7 +734,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -737,6 +748,7 @@
 			baseConfigurationReference = CE1A27DA6B7247FDC9DFD23F /* Pods-PPS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PPS/PPS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YBSQ7W65CP;
 				INFOPLIST_FILE = PPS/Info.plist;
@@ -757,6 +769,7 @@
 			baseConfigurationReference = 82FE3218183D0E2D04ADCF2E /* Pods-PPS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PPS/PPS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YBSQ7W65CP;
 				INFOPLIST_FILE = PPS/Info.plist;

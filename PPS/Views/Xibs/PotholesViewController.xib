@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PotholesViewController" customModule="PPS" customModuleProvider="target">
             <connections>
+                <outlet property="circleButton" destination="g4o-2c-9Jw" id="WfE-Fc-63G"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,8 +20,38 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4o-2c-9Jw" customClass="MyButton" customModule="PPS" customModuleProvider="target">
+                    <rect key="frame" x="304" y="602" width="55" height="55"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="Q7u-27-Znx"/>
+                        <constraint firstAttribute="height" constant="55" id="rq2-A0-oCa"/>
+                    </constraints>
+                    <size key="titleShadowOffset" width="20" height="20"/>
+                    <state key="normal" image="pending_grey">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="27"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="circleButtonAction:" destination="-1" eventType="touchUpInside" id="Zoq-F7-kAK"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="0.97254901960784312" green="0.6470588235294118" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g4o-2c-9Jw" secondAttribute="trailing" constant="16" id="gqR-tz-wkY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="g4o-2c-9Jw" secondAttribute="bottom" constant="10" id="p3y-BX-tae"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="pending_grey" width="23" height="23"/>
+    </resources>
 </document>
