@@ -28,6 +28,10 @@ class PotholesViewController: BaseViewController {
     }
     
     @IBAction func circleButtonAction(_ sender: Any) {
+        if(parent is ViewController)
+        {
+            (parent as! ViewController).requestLocationService()
+        }
         let authViewController = (UIApplication.shared.delegate as! AppDelegate).authUI?.authViewController()
         present(authViewController!, animated: true, completion: nil)
     }

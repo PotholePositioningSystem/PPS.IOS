@@ -7,7 +7,7 @@ target 'PPS' do
 
   # Pods for PPS
   pod 'FirebaseUI/Auth', '~> 4.5.5'
-
+  pod 'LMGaugeView', '~> 1.0.3'
   pod 'FirebaseUI/Google', '~> 4.5.5'
   pod 'FirebaseUI/Facebook', '~> 4.5.5'
   pod 'FirebaseUI/Twitter', '~> 4.5.5'

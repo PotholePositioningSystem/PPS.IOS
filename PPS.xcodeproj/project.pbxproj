@@ -83,6 +83,7 @@
 		9830BB5D20BE621A000AC9A6 /* UITabSafeAreaFix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabSafeAreaFix.swift; sourceTree = "<group>"; };
 		9830BB5F20BE6985000AC9A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9830BB6120BE6B71000AC9A6 /* PPS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PPS.entitlements; sourceTree = "<group>"; };
+		98885E1A20C7A734001A02A8 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		98E66442209815BA00CF28A6 /* PPS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PPS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98E66445209815BA00CF28A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98E66447209815BA00CF28A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 				98E6644C209815BD00CF28A6 /* Assets.xcassets */,
 				98E66451209815BD00CF28A6 /* Info.plist */,
 				9814895D209AD530002E538C /* Keys.swift */,
+				98885E1A20C7A734001A02A8 /* Bridging-Header.h */,
 			);
 			path = PPS;
 			sourceTree = "<group>";
@@ -476,6 +478,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/LMGaugeView/LMGaugeView.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -488,6 +491,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LMGaugeView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -747,6 +751,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE1A27DA6B7247FDC9DFD23F /* Pods-PPS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PPS/PPS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -759,8 +764,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pps.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PPS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 			};
 			name = Debug;
 		};
@@ -768,6 +775,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 82FE3218183D0E2D04ADCF2E /* Pods-PPS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PPS/PPS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -780,8 +788,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = pps.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/PPS/Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/**";
 			};
 			name = Release;
 		};

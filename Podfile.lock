@@ -68,6 +68,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.15)
   - GTMSessionFetcher/Full (1.1.15):
     - GTMSessionFetcher/Core (= 1.1.15)
+  - LMGaugeView (1.0.3)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -84,6 +85,7 @@ DEPENDENCIES:
   - FirebaseUI/Phone (~> 4.5.5)
   - FirebaseUI/Twitter (~> 4.5.5)
   - GoogleMaps (~> 2.7.0)
+  - LMGaugeView
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -101,6 +103,7 @@ SPEC REPOS:
     - GoogleToolboxForMac
     - GTMOAuth2
     - GTMSessionFetcher
+    - LMGaugeView
     - nanopb
     - TwitterCore
     - TwitterKit
@@ -120,10 +123,11 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  LMGaugeView: 043dfe2a51abf37c87fdda22837fd1af0531c478
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 01b743fdacfcbd897cfa8774a523ba13bdd0286d
+PODFILE CHECKSUM: 90c2a5dd1f981ded1f54f0f49811f0bbf57205a9
 
 COCOAPODS: 1.5.0

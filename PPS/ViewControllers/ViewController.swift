@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: BaseViewController,UIScrollViewDelegate,UITabBarDelegate {
 
@@ -16,6 +17,7 @@ class ViewController: BaseViewController,UIScrollViewDelegate,UITabBarDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    private let locationManager = CLLocationManager()
     var screenWidth: CGFloat = 0
     
     var view1:PotholesViewController?
@@ -51,6 +53,7 @@ class ViewController: BaseViewController,UIScrollViewDelegate,UITabBarDelegate {
         mainNavBar()
         scrollView.delegate = self
         tabBar.delegate = self
+         locationInit()
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -62,7 +65,7 @@ class ViewController: BaseViewController,UIScrollViewDelegate,UITabBarDelegate {
 
 }
 
-extension ViewController
+extension ViewController:CLLocationManagerDelegate
 {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -162,6 +165,49 @@ extension ViewController
         }, completion: nil)
         
         
+    }
+    
+    //============================================
+    //               Location
+    //============================================
+    func  locationInit()
+    {
+        locationManager.delegate = self
+        requestLocationService()
+    }
+    
+    func requestLocationService()
+    {
+        locationManager.requestWhenInUseAuthorization()
+        //TODO: add custom dialog when user refused to authrize and try back again
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        guard status == .authorizedWhenInUse else {
+            return
+        }
+        
+        locationManager.startUpdatingLocation()
+        
+        view2?.locationServiceAuthorized()
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let _ = locations.first else {
+            return
+        }
+        
+        DispatchQueue.main.async {[weak self] () in
+            if(self != nil)
+            {
+                self?.view2?.locationDidUpdate(manager: manager, didUpdateLocations: locations)
+            }
+        }
+        
+
+        //        locationManager.stopUpdatingLocation()
     }
     
 }

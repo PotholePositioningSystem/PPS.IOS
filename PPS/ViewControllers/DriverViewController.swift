@@ -8,17 +8,23 @@
 
 import UIKit
 import GoogleMaps
+import LMGaugeView
 
 class DriverViewController: BaseViewController {
     
     @IBOutlet weak var mapView: GMSMapView!
-    private let locationManager = CLLocationManager()
+    @IBOutlet weak var speedOMeter: UIView!
+    var gaugeView:LMGaugeView?
+
     
+    override func viewDidLayoutSubviews() {
+        setupGauge()
+    }
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationInit()
+       
         
         // Do any additional setup after loading the view.
     }
@@ -42,37 +48,37 @@ class DriverViewController: BaseViewController {
 }
 
 
-extension DriverViewController: CLLocationManagerDelegate {
+extension DriverViewController {
 
-    func  locationInit()
+    func setupGauge()
     {
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+        gaugeView = LMGaugeView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        gaugeView?.valueTextColor = UIColor.clear
+        if let _ = gaugeView
+        {
+            speedOMeter.addSubview(gaugeView!)
+        }
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
-        guard status == .authorizedWhenInUse else {
-            return
-        }
-        
-        locationManager.startUpdatingLocation()
-        
-        
+    func update(speed:CGFloat)
+    {
+        gaugeView?.valueTextColor = UIColor.black
+        gaugeView?.value = speed
+    }
+
+
+    func locationServiceAuthorized()
+    {
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
     }
+
     
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-        
-    
-        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-        
-    
-        locationManager.stopUpdatingLocation()
+    func locationDidUpdate( manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        update(speed: CGFloat((locations.first?.speed)!))
+        mapView.camera = GMSCameraPosition(target: (locations.first?.coordinate)!, zoom: 15, bearing: 0, viewingAngle: 0)
     }
+    
+    
 }
